@@ -132,12 +132,14 @@ python main.py --help
 ### 파일 포맷
 1. --secrets-file, --values-file 포맷
 ```txt
+# secrets.env 파일 예시:
 MY_API_KEY=your_secret_or_value_here
 DATABASE_URL=postgres://user:pass@host:port/dbname
 ```
 
 2. --ds, --dv 포맷
 ```txt
+# secrets_to_delete.txt 파일 예시:
 MY_API_KEY
 DATABASE_URL
 ```
@@ -159,6 +161,10 @@ repo-name3
 3. 변경 사항을 Commit 합니다 ('git commit -m 'Add some AmazingFeature'').
 4. Branch를 Push 합니다 ('git push origin feature/AmazingFeature').
 5. Pull Request를 엽니다.
+
+---
+
+## 이 프로젝트가 유용하다면 Star를 눌러주세요!
 
 ---
 
