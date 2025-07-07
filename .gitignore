@@ -5,3 +5,7 @@ __pycache__
 
 test.sh
 test.txt
+
+mkdocs.yml
+site
+docs
