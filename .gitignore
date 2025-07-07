@@ -1,0 +1,7 @@
+venv*
+organization
+github
+__pycache__
+
+test.sh
+test.txt
