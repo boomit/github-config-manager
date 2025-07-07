@@ -122,7 +122,7 @@ python main.py --help
 -v | --values-file | 설정할 Variable 이름과 값을 포함하는 파일 경로 (예: 'VAR_NAME=VALUE') | 아니오
 -ds | --ds | 삭제할 Secret 이름 목록을 포함하는 파일 경로 (한 줄에 하나씩) | 아니오
 -dv | --dv | 삭제할 Variable 이름 목록을 포함하는 파일 경로 (한 줄에 하나씩) | 아니오
--tr | --tr | 작업을 수행할 특정 리포지토리 목록을 포함하는 파일 경로 (한 줄에 하나씩, 'owner/repo' 형식) | 아니오
+-tr | --tr | 작업을 수행할 특정 리포지토리 목록을 포함하는 파일 경로 (한 줄에 하나씩, 'repo' 형식). 지정하지 않으면 organization내의 모든 repo에 적용 | 아니오
 -w | --workers | 동시에 처리할 최대 워커(스레드) 수 (기본값: '1' - 순차 처리) | 아니오
 -sl | --sleep | 각 리포지토리 처리 후 대기 시간(초) (순차 처리 시 적용, 기본값: '0') | 아니오
 -f | --force | Secret/Variable 설정 시 기존 값을 강제로 덮어쓸지 여부 (기본값: 'False') | 아니오
@@ -142,6 +142,12 @@ MY_API_KEY
 DATABASE_URL
 ```
 
+3. --tr
+```txt
+repo-name1
+repo-name2
+repo-name3
+```
 
 
 ## 기여하기
