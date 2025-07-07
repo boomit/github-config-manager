@@ -58,11 +58,12 @@ pip install -r requirements.txt
 
 ---
 
-사용법
+### 사용법
 
 'main.py' 스크립트를 사용하여 작업을 수행합니다. 다양한 명령줄 인자를 통해 Secret 및 Variable 작업 방식을 제어할 수 있습니다.
-
+```bash
 python main.py --help
+```
 
 예시:
 
@@ -82,21 +83,27 @@ python main.py --help
 3. 특정 리포지토리 목록에 Secret 강제 업데이트:
    'target_repos.txt'에 나열된 리포지토리에서 'API_KEY' Secret을 강제로 업데이트합니다.
 
+```bash
    # target_repos.txt 예시:
    # my-org/repo-a
    # another-org/repo-b
-   
+```
+
+```bash
    echo "API_KEY=new_super_secret" > api_key.env
    python main.py -tr target_repos.txt -s api_key.env --force
+```
 
 4. 다중 워커(병렬 처리)를 사용하여 Secret 및 Variable 삭제/설정:
    'my-org' 조직의 리포지토리를 5개의 워커(스레드)로 병렬 처리합니다.
 
+```bash
    echo "SECRET_TO_DELETE" > delete_secrets.txt
    echo "VAR_TO_SET=value" > set_vars.txt
    python main.py -o my-org -ds delete_secrets.txt -v set_vars.txt -w 5
+```
 
-인자 (Arguments)
+### 인자 (Arguments)
 
 단축 | 전체 인자 | 설명 | 필수
 :--- | :--------------- | :----------------------------------------------------------------------------- | :---
@@ -112,7 +119,7 @@ python main.py --help
 
 ---
 
-기여하기
+## 기여하기
 
 기여는 언제나 환영입니다! 버그 보고, 기능 제안, 코드 개선 등 어떤 형태의 기여라도 좋습니다.
 
@@ -124,6 +131,6 @@ python main.py --help
 
 ---
 
-라이선스
+## 라이선스
 
 이 프로젝트는 MIT 라이선스에 따라 배포됩니다. 자세한 내용은 'LICENSE' 파일을 참조하세요.
