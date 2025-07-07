@@ -4,7 +4,7 @@ import subprocess
 from pathlib import Path
 
 # Import function for logging messages
-from logs import add_log_entry
+from utils.logs import add_log_entry
 
 
 def read_key_value_pairs(file_path: Path, item_type: str = "settings", repo_name: str = None) -> dict:

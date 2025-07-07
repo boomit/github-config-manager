@@ -1,15 +1,15 @@
 import sys
 
-from cli_parser import parse_arguments
-from github_operations import (
+from core.cli_parser import parse_arguments
+from core.github_operations import (
     get_repositories_from_github,
     display_and_confirm_actions,
     process_single_repository,
 )
-from utils import read_key_value_pairs, read_list_from_file, validate_file_path
-from main_processor import start_abort_listener_thread, process_repositories # Renamed from 'threads' to 'main_processor'
-from logs import add_log_entry
-from configs import GitHubOperationConfig
+from utils.utils import read_key_value_pairs, read_list_from_file, validate_file_path
+from core.main_processor import start_abort_listener_thread, process_repositories # Renamed from 'threads' to 'main_processor'
+from utils.logs import add_log_entry
+from core.configs import GitHubOperationConfig
 
 def main():
     """

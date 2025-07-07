@@ -4,8 +4,8 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Import configuration and logging modules
-from configs import GitHubOperationConfig
-from logs import (
+from core.configs import GitHubOperationConfig
+from utils.logs import (
     add_log_entry,
     get_group_log_entries,
     clear_group_log_entries,

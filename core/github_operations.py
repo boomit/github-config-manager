@@ -3,12 +3,12 @@ import sys
 import threading
 import time
 
-from utils import (
+from utils.utils import (
     execute_subprocess_command,
     parse_json_string,
 )
 
-from logs import (
+from utils.logs import (
     add_log_entry,
 )
 
