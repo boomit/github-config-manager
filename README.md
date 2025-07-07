@@ -46,6 +46,16 @@
   👉 설치 가이드: https://cli.github.com/  
   👉 로그인: `gh auth login`
 
+- 필수 GitHub 권한 (Scopes):**
+
+`github-config-manager`가 Secrets 및 Variables 작업을 성공적으로 수행하려면, `gh auth login` 시 발급받는 GitHub Personal Access Token (PAT)에 다음 권한(Scope)이 부여되어야 합니다.
+
+* `repo`: 리포지토리 Secrets 및 Variables를 읽고, 쓰고, 삭제하는 데 필요합니다.
+* `read:org`: (선택 사항) 특정 조직의 모든 리포지토리 목록을 가져올 때 필요합니다. 개인 리포토리만 관리한다면 필수는 아닙니다.
+
+이 권한들은 `gh auth login` 과정에서 GitHub CLI가 자동으로 제안하거나, 사용자가 명시적으로 선택할 수 있습니다.
+
+
 ### 📦 설치
 
 ```bash
@@ -118,6 +128,21 @@ python main.py --help
 -f | --force | Secret/Variable 설정 시 기존 값을 강제로 덮어쓸지 여부 (기본값: 'False') | 아니오
 
 ---
+
+### 파일 포맷
+1. --secrets-file, --values-file 포맷
+```txt
+MY_API_KEY=your_secret_or_value_here
+DATABASE_URL=postgres://user:pass@host:port/dbname
+```
+
+2. --ds, --dv 포맷
+```txt
+MY_API_KEY
+DATABASE_URL
+```
+
+
 
 ## 기여하기
 
